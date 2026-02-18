@@ -42,8 +42,8 @@ router.get('/', async (req, res) => {
                 }
             }
 
-            DanuwaPairWeb.ev.on('creds.update', saveCreds);
-            DanuwaPairWeb.ev.on("connection.update", async (s) => {
+            vimaPairWeb.ev.on('creds.update', saveCreds);
+            vimaPairWeb.ev.on("connection.update", async (s) => {
                 const { connection, lastDisconnect } = s;
                 if (connection === "open") {
                     try {
